@@ -84,7 +84,7 @@ echo "certbot certonly --manual --preferred-challenges dns \
   --agree-tos --manual-public-ip-logging-ok --keep $TEST_PARAM"
 
 # Create certificates
-certbot certonly --manual --preferred-challenges dns \
+certbot certonly --nginx --manual --preferred-challenges dns \
   --manual-auth-hook /scripts/auth.sh \
   --manual-cleanup-hook /scripts/cleanup.sh \
   "${CHAIN_PARAM[@]}" $EMAIL_PARAM -d $LETSENCRYPT_DOMAIN \
